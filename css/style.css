@@ -1,0 +1,134 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Georgia", serif;
+}
+
+body {
+  background: #000;
+  color: #fff;
+}
+
+.header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: rgba(0,0,0,0.8);
+  z-index: 1000;
+}
+
+.header ul {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  padding: 15px;
+}
+
+.header a {
+  color: #fff;
+  text-decoration: none;
+  margin: 0 15px;
+  font-size: 14px;
+}
+
+.hero {
+  height: 100vh;
+  text-align: center;
+  position: relative;
+  padding-top: 120px;
+}
+
+.hero img {
+  width: 280px;
+  border-radius: 6px;
+  z-index: 2;
+  position: relative;
+}
+
+.hero h1 {
+  font-size: 64px;
+  margin-top: 20px;
+}
+
+.hero h2 {
+  font-size: 20px;
+  letter-spacing: 2px;
+  margin-bottom: 10px;
+}
+
+.hero p {
+  max-width: 600px;
+  margin: auto;
+  font-size: 16px;
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.5);
+}
+
+.section {
+  padding: 100px 20px;
+  text-align: center;
+}
+
+.light {
+  background: #f5f1eb;
+  color: #000;
+}
+
+.dark {
+  background: #000;
+}
+
+.skills {
+  list-style: none;
+}
+
+.skills li {
+  margin: 10px 0;
+}
+
+.carousel {
+  position: relative;
+  max-width: 900px;
+  margin: auto;
+}
+
+.carousel-track {
+  display: flex;
+  overflow: hidden;
+}
+
+.project {
+  min-width: 100%;
+  padding: 20px;
+}
+
+.project img {
+  width: 100%;
+  border-radius: 6px;
+}
+
+.btn {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 10px 20px;
+  border: 1px solid #000;
+  text-decoration: none;
+  color: #000;
+}
+
+.prev, .next {
+  position: absolute;
+  top: 50%;
+  font-size: 40px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.prev { left: -40px; }
+.next { right: -40px; }
