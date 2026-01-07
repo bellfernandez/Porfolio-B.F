@@ -1,9 +1,9 @@
 let index = 0;
-const slides = document.querySelectorAll('.slide');
+const slides = document.querySelectorAll('.project');
 
 function showSlide(i) {
-  slides.forEach(slide => slide.classList.remove('active'));
-  slides[i].classList.add('active');
+  slides.forEach(slide => slide.style.display = "none");
+  slides[i].style.display = "block";
 }
 
 function next() {
@@ -15,3 +15,9 @@ function prev() {
   index = (index - 1 + slides.length) % slides.length;
   showSlide(index);
 }
+
+// inicial
+showSlide(index);
+
+document.querySelector(".next").addEventListener("click", next);
+document.querySelector(".prev").addEventListener("click", prev);
