@@ -42,12 +42,13 @@ body {
   height: 100vh;
   background:
     linear-gradient(rgba(0,0,0,.55), rgba(0,0,0,.85)),
-    url("../assets/perfil.jpg") center / cover no-repeat;
+    url("../assets/perfil.jpg") center top / cover no-repeat;
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
 }
+
 
 .hero-content {
   max-width: 850px;
@@ -128,7 +129,8 @@ body {
 }
 
 .project {
-  min-width: 80%;
+  min-width: 60%;
+  max-width: 600px;
   margin: 0 20px;
   background: #111;
   color: #fff;
@@ -144,9 +146,12 @@ body {
 
 .project img {
   width: 100%;
+  max-height: 280px;
+  object-fit: cover;
   border-radius: 16px;
   margin-bottom: 20px;
 }
+
 
 /* BUTTON */
 .btn {
@@ -181,3 +186,11 @@ body {
 
 .prev { left: -40px; }
 .next { right: -40px; }
+
+.project:hover img {
+  transform: scale(1.05);
+}
+
+.project img {
+  transition: transform .4s ease;
+}
