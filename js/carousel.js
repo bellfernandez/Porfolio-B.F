@@ -1,23 +1,20 @@
 let index = 0;
-const slides = document.querySelectorAll('.project');
+const track = document.querySelector(".carousel-track");
+const slides = document.querySelectorAll(".project");
+const nextBtn = document.querySelector(".next");
+const prevBtn = document.querySelector(".prev");
 
-function showSlide(i) {
-  slides.forEach(slide => slide.style.display = "none");
-  slides[i].style.display = "block";
+function updateCarousel() {
+  const width = slides[0].offsetWidth + 40;
+  track.style.transform = `translateX(-${index * width}px)`;
 }
 
-function next() {
+nextBtn.addEventListener("click", () => {
   index = (index + 1) % slides.length;
-  showSlide(index);
-}
+  updateCarousel();
+});
 
-function prev() {
+prevBtn.addEventListener("click", () => {
   index = (index - 1 + slides.length) % slides.length;
-  showSlide(index);
-}
-
-// inicial
-showSlide(index);
-
-document.querySelector(".next").addEventListener("click", next);
-document.querySelector(".prev").addEventListener("click", prev);
+  updateCarousel();
+});

@@ -2,86 +2,89 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: "Georgia", serif;
 }
 
 body {
-  font-family: "Georgia", serif;
   background: #000;
   color: #fff;
-}
-
-/* HEADER */
-.header {
-  position: absolute;
-  top: 25px;
-  width: 100%;
-  z-index: 10;
-}
-
-.header ul {
-  display: flex;
-  justify-content: center;
-  gap: 30px;
-  list-style: none;
-}
-
-.header a {
-  text-decoration: none;
-  color: #fff;
-  font-size: 13px;
-  letter-spacing: 2px;
-  opacity: 0.8;
-}
-
-.header a:hover {
-  opacity: 1;
 }
 
 /* HERO */
 .hero {
   height: 100vh;
   background:
-    linear-gradient(rgba(0,0,0,.55), rgba(0,0,0,.85)),
-    url("../assets/perfil.jpg") center top / cover no-repeat;
+    linear-gradient(rgba(0,0,0,.4), rgba(0,0,0,.85)),
+    url("../assets/perfil.jpg") center 15% / cover no-repeat;
+  position: relative;
   display: flex;
-  align-items: center;
   justify-content: center;
-  text-align: center;
+  align-items: center;
 }
 
-
 .hero-content {
-  max-width: 850px;
+  text-align: center;
+  max-width: 800px;
   padding: 20px;
 }
 
-.hero h1 {
+.hero-content h1 {
   font-size: 72px;
-  font-weight: 300;
+  letter-spacing: 2px;
 }
 
-.hero h2 {
-  margin-top: 10px;
-  font-size: 15px;
-  letter-spacing: 3px;
+.hero-content h2 {
+  font-size: 18px;
+  margin: 15px 0;
   text-transform: uppercase;
-  color: #ddd;
 }
 
-.hero p {
-  margin-top: 25px;
+.hero-content p {
   font-size: 16px;
-  color: #eee;
+  opacity: .9;
 }
 
-/* SECTIONS */
+/* MENU HERO */
+.hero-menu {
+  position: absolute;
+  bottom: 30px;
+  width: 100%;
+}
+
+.hero-menu nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 60px;
+}
+
+.hero-menu ul {
+  display: flex;
+  list-style: none;
+  gap: 25px;
+}
+
+.hero-menu a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 13px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.menu-name {
+  font-size: 18px;
+  letter-spacing: 2px;
+}
+
+/* SECCIONES */
 .section {
-  padding: 120px 20px;
+  padding: 100px 20px;
   text-align: center;
 }
 
 .light {
-  background: #f4efe8;
+  background: #f5f1eb;
   color: #000;
 }
 
@@ -89,59 +92,36 @@ body {
   background: #000;
 }
 
-/* CURVES */
-.curved {
-  position: relative;
-}
-
-.curved::before {
-  content: "";
-  position: absolute;
-  top: -80px;
-  left: 0;
-  width: 100%;
-  height: 80px;
-  background: inherit;
-  border-top-left-radius: 100% 80px;
-  border-top-right-radius: 100% 80px;
-}
-
-/* SKILLS */
 .skills {
   list-style: none;
-  margin-top: 30px;
 }
 
 .skills li {
   margin: 10px 0;
 }
 
-/* CAROUSEL */
+/* CARRUSEL */
 .carousel {
   position: relative;
-  max-width: 1000px;
+  max-width: 900px;
   margin: auto;
+  overflow: hidden;
 }
 
 .carousel-track {
   display: flex;
-  transition: transform 0.6s ease;
+  transition: transform .5s ease;
 }
 
 .project {
   min-width: 60%;
   max-width: 600px;
-  margin: 0 20px;
-  background: #111;
-  color: #fff;
-  border-radius: 22px;
-  padding: 35px;
-  transition: transform .4s ease, box-shadow .4s ease;
-}
-
-.project:hover {
-  transform: scale(1.04);
-  box-shadow: 0 25px 50px rgba(0,0,0,.6);
+  margin: auto;
+  background: #fff;
+  color: #000;
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 0 20px 40px rgba(0,0,0,.15);
 }
 
 .project img {
@@ -150,47 +130,38 @@ body {
   object-fit: cover;
   border-radius: 16px;
   margin-bottom: 20px;
+  transition: transform .4s ease;
 }
 
+.project:hover img {
+  transform: scale(1.05);
+}
 
-/* BUTTON */
 .btn {
   display: inline-block;
-  margin-top: 20px;
-  padding: 12px 32px;
+  margin-top: 15px;
+  padding: 10px 25px;
   border-radius: 30px;
-  border: 1px solid #c8b89b;
-  color: #c8b89b;
+  background: #000;
+  color: #fff;
   text-decoration: none;
-  transition: all .3s ease;
+  transition: background .3s ease;
 }
 
-.btn:hover,
-.btn:focus {
-  background: #c8b89b;
-  color: #000;
-  transform: translateY(-2px);
+.btn:hover {
+  background: #444;
 }
 
-/* CONTROLS */
 .prev, .next {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
+  font-size: 40px;
   background: none;
   border: none;
-  font-size: 42px;
   cursor: pointer;
   color: #000;
 }
 
 .prev { left: -40px; }
 .next { right: -40px; }
-
-.project:hover img {
-  transform: scale(1.05);
-}
-
-.project img {
-  transition: transform .4s ease;
-}
