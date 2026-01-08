@@ -19,7 +19,7 @@ body {
   height: 100vh;
   background:
     linear-gradient(rgba(0,0,0,.35), rgba(0,0,0,.85)),
-    url("../assets/perfil.jpg") center top/ contain no-repeat;
+    url("../assets/banner.jpg") center top/ contain no-repeat;
   position: 15%;
   display: flex;
   align-items: center;

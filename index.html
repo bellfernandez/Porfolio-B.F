@@ -8,51 +8,48 @@
 </head>
 <body>
 
-<!-- HERO -->
-<section id="inicio" class="hero">
+<!-- HERO + MENU -->
+<header class="hero" id="inicio">
+  <nav class="menu">
+    <ul class="menu-left">
+      <li><a href="#inicio">Inicio</a></li>
+      <li><a href="#perfil">Perfil Profesional</a></li>
+    </ul>
 
-   <div class="hero-content">
-    <h1>Belén Fernández</h1>
-    
+    <span class="logo">Belén Fernández</span>
+
+    <ul class="menu-right">
+      <li><a href="#proyectos">Proyectos</a></li>
+      <li><a href="#contacto">Contacto</a></li>
+    </ul>
+  </nav>
+
+  <div class="hero-content">
     <h2>Diseño Web | Desarrollo Frontend | Ciberseguridad Junior</h2>
-    <p>
-      Diseñadora web en formación con experiencia en creación de sitios responsive,
-      landing pages y estructuras frontend claras.
-      Interés en ciberseguridad y buenas prácticas de desarrollo.
-    </p>
   </div>
-   
+</header>
 
-  <!-- MENU ABAJO -->
-  <header class="hero-menu">
-    <nav>
-      <ul class="menu-left">
-        <li><a href="#inicio">Inicio</a></li>
-        <li><a href="#perfil">Perfil Profesional</a></li>
-        <li><a href="#habilidades">Habilidades</a></li>
-      </ul>
-
-      <span class="menu-name">Belén Fernández</span>
-
-      <ul class="menu-right">
-        <li><a href="#proyectos">Proyectos</a></li>
-        <li><a href="#formacion">Formación</a></li>
-        <li><a href="#contacto">Contacto</a></li>
-      </ul>
-    </nav>
-    
-  </header>
-
-</section>
+<!-- ONDA NEGRO → BLANCO -->
+<div class="wave wave-dark-to-light">
+  <svg viewBox="0 0 1440 140" preserveAspectRatio="none">
+    <path d="M0,80 C240,140 480,20 720,40 960,60 1200,120 1440,80 L1440,0 L0,0 Z"></path>
+  </svg>
+</div>
 
 <!-- PERFIL -->
-<section id="perfil" class="section light">
-  <h2>Perfil Profesional</h2>
-  <p>
-    Soy diseñadora web en formación con interés en ciberseguridad.
-    Trabajo en la creación de sitios modernos, responsivos y organizados,
-    priorizando la experiencia del usuario y la estructura del código.
-  </p>
+<section id="perfil" class="perfil-section">
+  <div class="perfil-foto">
+    <img src="assets/perfil.jpg" alt="Belén Fernández">
+  </div>
+
+  <div class="perfil-texto">
+    <h2>Perfil Profesional</h2>
+    <p>
+      Soy Belén Fernández, desarrolladora web con formación en informática y enfoque en buenas prácticas de desarrollo y ciberseguridad.
+      Desarrollo aplicaciones y sitios web funcionales, mantenibles y responsivos, cuidando tanto la experiencia de usuario como la seguridad básica de la información.
+      Me interesa seguir creciendo en el área IT, participar en proyectos reales y aportar soluciones claras, ordenadas y confiables.
+    </p>
+  </div>
 </section>
 
 <!-- HABILIDADES -->
@@ -61,12 +58,12 @@
   <ul class="skills">
     <li>HTML5 & CSS3</li>
     <li>JavaScript básico</li>
-    <li>Diseño responsive / Flexbox</li>
+    <li>Diseño responsive/ flexbox</li>
     <li>Git & GitHub</li>
     <li>VS Code</li>
     <li>Canva</li>
     <li>Buenas prácticas de seguridad web</li>
-    <li>Introducción a la ciberseguridad</li>
+    <li>Introduccion a la ciberseguridad</li>
   </ul>
 </section>
 
@@ -85,7 +82,7 @@
         <p>
           Desarrollo completo de un sitio web institucional con navegación clara,
           diseño limpio y estructura semántica. Diseño responsive para cualquier dispositivo. 
-          Proyecto evocado en la experiencia del usuario y presentación profesional
+          Proyecto evocado en la experiencia del usuario y presentacion profesional
         </p>
         <p><strong>Tecnologías:</strong> HTML5, CSS3</p>
         <a href="https://escuela-aerochenaut.netlify.app/" target="_blank" class="btn">Ver proyecto</a>
@@ -97,8 +94,10 @@
         <p>
           Landing orientada a conversión, con jerarquía visual,
           diseño mobile-first y enfoque en usabilidad.
-          Desarrollo de una aplicación web de agenda de turnos orientada a pequeños negocios y profesionales independientes.
+          Desarrollo de una aplicacion web de agenda de turnos orientada a pequeños negocios y profesionales independientes.
+          Permite visualizar disponibilidad, organizar horarios y registrar turnos de manera clara y ordenada.
         </p>
+        <p>Se aplicaron buenas practicas de desarrollo frontend y nociones iniciales de seguridad, como validacion de datos y control básico de formularios.</p>
         <p><strong>Tecnologías:</strong> HTML5, CSS3, JavaScript</p>
         <a href="https://feminastudio-turnos.netlify.app/" target="_blank" class="btn">Ver proyecto</a>
       </div>
@@ -107,10 +106,10 @@
         <img src="assets/proyecto3.jpg" alt="E-commerce">
         <h3>E-commerce Virtual</h3>
         <p>
-          Tienda Virtual E-commerce con menú desplegable y carrito de compra.
-          Diseño mobile-first y enfoque en usabilidad.
+          Tienda Virtual E-commerce con menu desplegable y carrito de compra. Diseño adaptado a react.
+          diseño mobile-first y enfoque en usabilidad. Orientado a la venta de productos, con catálogo organizado, visualizacion clara y navegación intuitiva.
         </p>
-        <p><strong>Tecnologías:</strong> HTML5, CSS3, JavaScript, React</p>
+        <p><strong>Tecnologías:</strong> HTML5, CSS3, JavaScript, react</p>
         <a href="https://e-commerce-fernandezhop.netlify.app/" target="_blank" class="btn">Ver proyecto</a>
       </div>
 
@@ -120,21 +119,11 @@
   </div>
 </section>
 
-<!-- FORMACION -->
-<section id="formacion" class="section dark">
-  <h2>Formación y Certificaciones</h2>
-  <ul>
-    <li>Diseño Web – En formación</li>
-    <li>Introducción a la Ciberseguridad</li>
-    <li>Lógica de Programación</li>
-  </ul>
-</section>
-
 <!-- CONTACTO -->
-<section id="contacto" class="section light">
+<section id="contacto" class="section dark">
   <h2>Contacto</h2>
   <p>Email: mbfernandezbelen@gmail.com</p>
-  <p>Teléfono: 2325-402245</p>
+  <p>Telefono: 2325-402245</p>
   <p>
     <a href="https://www.linkedin.com/in/belen-fern%C3%A1ndez-mbf/">LinkedIn</a> |
     <a href="https://github.com/bellfernandez">GitHub</a>
