@@ -27,7 +27,6 @@ body {
   overflow: hidden;
 }
 
-
 /* =========================
    MENU ABAJO DEL HERO
 ========================= */
@@ -38,7 +37,7 @@ body {
   width: 100%;
   padding: 30px 0 40px;
   background: linear-gradient(to top, rgba(0,0,0,.85), transparent);
-  z-index: 10; /* 🔥 esto hace que quede arriba de las ondas */
+  z-index: 10;
 }
 
 .hero-menu nav {
@@ -47,7 +46,6 @@ body {
   align-items: center;
   gap: 60px;
 }
-
 
 .hero-menu ul {
   display: flex;
@@ -162,7 +160,6 @@ body {
   transition: transform 0.5s ease;
 }
 
-/* 3 cards visibles */
 .project {
   flex: 0 0 calc(33.333% - 20px);
   background: #e6e2dc;
@@ -190,8 +187,6 @@ body {
   margin-bottom: 10px;
 }
 
-/* IMAGEN CARD */
-
 .project img {
   width: 100%;
   height: 190px;
@@ -204,8 +199,6 @@ body {
 .project:hover img {
   transform: scale(1.06);
 }
-
-/* BOTON */
 
 .btn {
   display: inline-block;
@@ -224,8 +217,6 @@ body {
   transform: translateY(-3px);
   box-shadow: 0 10px 25px rgba(0,0,0,.35);
 }
-
-/* FLECHAS */
 
 .prev,
 .next {
@@ -288,41 +279,6 @@ body {
 }
 
 /* =========================
-   ONDAS ENTRE SECCIONES
-========================= */
-.wave-bottom {
-  position: relative;
-}
-
-.wave-bottom::after {
-  content: "";
-  position: absolute;
-  bottom: -2px;
-  left: 0;
-  width: 100%;
-  height: 120px;
-  background: #f5f1eb;
-  clip-path: path("M0,40 C150,120 350,0 600,40 850,80 1100,40 1400,60 L1400,0 L0,0 Z");
-  z-index: 2; /* 👈 clave */
-}
-
-.wave-top {
-  position: relative;
-}
-
-.wave-top::before {
-  content: "";
-  position: absolute;
-  top: -118px;
-  left: 0;
-  width: 100%;
-  height: 120px;
-  background: #000;
-  clip-path: path("M0,60 C200,0 400,120 700,60 1000,0 1200,80 1400,40 L1400,120 L0,120 Z");
-  z-index: 2; /* 👈 clave */
-}
-
-/* =========================
    ANIMACIONES SCROLL
 ========================= */
 
@@ -335,13 +291,4 @@ body {
 .fade-up.show {
   opacity: 1;
   transform: translateY(0);
-}
-
-.hero {
-  position: relative;
-  overflow: hidden;
-}
-
-.wave-bottom::after {
-  bottom: -2px;
 }
