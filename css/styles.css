@@ -444,3 +444,65 @@ body {
   }
 
 }
+@media (max-width: 500px) {
+
+  /* =========================
+     HERO MOBILE – COMPOSICIÓN
+  ========================= */
+
+  .hero {
+    min-height: 65svh;
+    background-position: center 15%;
+    background-size: cover;
+    align-items: flex-end;
+  }
+
+  /* Oscurecemos fuerte arriba, suave abajo */
+  .hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+      to bottom,
+      rgba(0,0,0,.65),
+      rgba(0,0,0,.9)
+    );
+    z-index: 1;
+  }
+
+  .hero > * {
+    position: relative;
+    z-index: 2;
+  }
+
+  /* =========================
+     MENU MOBILE PRO
+  ========================= */
+
+  .hero-menu {
+    position: relative;
+    background: transparent;
+    padding: 20px 0 26px;
+  }
+
+  .hero-menu nav {
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .menu-name {
+    font-size: 16px;
+    letter-spacing: 1.8px;
+  }
+
+  .hero-menu ul {
+    justify-content: center;
+    gap: 18px;
+  }
+
+  .hero-menu a {
+    font-size: 11px;
+    opacity: 0.85;
+  }
+
+}
