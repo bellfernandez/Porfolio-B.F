@@ -256,11 +256,11 @@ body {
 /* PERFIL CON FOTO */
 
 .perfil {
-  display: block;
+  display: flex;
   align-items: center;
   justify-content: center;
   gap: 60px;
-  max-width: 1000px;
+  max-width: auto;
   margin: auto;
 }
 
