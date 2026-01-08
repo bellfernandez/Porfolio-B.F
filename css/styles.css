@@ -292,3 +292,39 @@ body {
   opacity: 1;
   transform: translateY(0);
 }
+
+@media (max-width: 500px) {
+
+  /* HERO más bajo en mobile */
+  .hero {
+    height: 90vh;
+  }
+
+  /* Menú del hero más compacto */
+  .hero-menu {
+    padding: 18px 0 24px;
+  }
+
+  .hero-menu nav {
+    gap: 30px;
+  }
+
+  .hero-menu ul {
+    gap: 18px;
+  }
+
+  .hero-menu a {
+    font-size: 11px;
+    letter-spacing: 0.5px;
+  }
+
+  .menu-name {
+    font-size: 15px;
+    letter-spacing: 1px;
+  }
+
+  /* Secciones más aireadas */
+  .section {
+    padding: 70px 18px;
+  }
+}
