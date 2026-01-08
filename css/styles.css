@@ -295,36 +295,86 @@ body {
 
 @media (max-width: 500px) {
 
-  /* HERO más bajo en mobile */
+  /* =========================
+     HERO MOBILE REAL
+  ========================= */
+
   .hero {
-    height: 90vh;
+    height: auto;              /* ❌ chau vh */
+    min-height: 100svh;        /* ✅ altura real mobile */
+    align-items: center;       /* ❌ no más flex-end */
+    padding-bottom: 120px;     /* espacio para el menú */
+    background-position: center top;
   }
 
-  /* Menú del hero más compacto */
+  /* =========================
+     MENU HERO MOBILE
+  ========================= */
+
   .hero-menu {
-    padding: 18px 0 24px;
+    position: relative;        /* ❌ no absolute */
+    background: rgba(0,0,0,.9);
+    padding: 20px 0;
   }
 
   .hero-menu nav {
-    gap: 30px;
-  }
-
-  .hero-menu ul {
-    gap: 18px;
-  }
-
-  .hero-menu a {
-    font-size: 11px;
-    letter-spacing: 0.5px;
+    flex-direction: column;
+    gap: 16px;
   }
 
   .menu-name {
-    font-size: 15px;
+    order: -1;                 /* nombre arriba */
+    font-size: 16px;
     letter-spacing: 1px;
   }
 
-  /* Secciones más aireadas */
+  .hero-menu ul {
+    gap: 16px;
+  }
+
+  .hero-menu a {
+    font-size: 12px;
+  }
+
+  /* =========================
+     PERFIL
+  ========================= */
+
+  .perfil {
+    gap: 30px;
+    padding-top: 40px;
+  }
+
+  .perfil-foto {
+    width: 140px;
+    height: 210px;
+  }
+
+  /* =========================
+     CARDS / PROYECTOS
+  ========================= */
+
+  .carousel {
+    overflow-x: auto;
+  }
+
+  .carousel-track {
+    gap: 20px;
+  }
+
+  .project {
+    flex: 0 0 85%;
+  }
+
+  /* =========================
+     SECCIONES
+  ========================= */
+
   .section {
-    padding: 70px 18px;
+    padding: 60px 16px;
+  }
+
+  h2 {
+    font-size: 28px;
   }
 }
