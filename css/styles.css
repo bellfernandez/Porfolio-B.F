@@ -37,6 +37,7 @@ body {
   width: 100%;
   padding: 30px 0 40px;
   background: linear-gradient(to top, rgba(0,0,0,.85), transparent);
+  z-index: 10; /* 🔥 esto hace que quede arriba de las ondas */
 }
 
 .hero-menu nav {
@@ -45,6 +46,7 @@ body {
   align-items: center;
   gap: 60px;
 }
+
 
 .hero-menu ul {
   display: flex;
@@ -287,7 +289,6 @@ body {
 /* =========================
    ONDAS ENTRE SECCIONES
 ========================= */
-
 .wave-bottom {
   position: relative;
 }
@@ -301,6 +302,7 @@ body {
   height: 120px;
   background: #f5f1eb;
   clip-path: path("M0,40 C150,120 350,0 600,40 850,80 1100,40 1400,60 L1400,0 L0,0 Z");
+  z-index: 1; /* 👈 clave */
 }
 
 .wave-top {
@@ -316,6 +318,7 @@ body {
   height: 120px;
   background: #000;
   clip-path: path("M0,60 C200,0 400,120 700,60 1000,0 1200,80 1400,40 L1400,120 L0,120 Z");
+  z-index: 1; /* 👈 clave */
 }
 
 /* =========================
