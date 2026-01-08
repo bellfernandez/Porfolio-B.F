@@ -18,38 +18,14 @@ body {
 .hero {
   height: 100vh;
   background:
-    linear-gradient(rgba(0,0,0,.35), rgba(0,0,0,.85)),
-    url("../assets/banner.jpg") center top/ contain no-repeat;
-  position: 15%;
+    linear-gradient(to bottom, rgba(0,0,0,.2), rgba(0,0,0,.9)),
+    url("../assets/banner.jpg") center center / cover no-repeat;
   display: flex;
-  align-items: center;
+  align-items: flex-end;
   justify-content: center;
+  position: relative;
 }
 
-.hero-content {
-  text-align: center;
-  max-width: 850px;
-  padding: 20px;
-}
-
-.hero-content h1 {
-  font-size: 72px;
-  letter-spacing: 2px;
-  margin-bottom: 15px;
-}
-
-.hero-content h2 {
-  font-size: 18px;
-  letter-spacing: 2px;
-  text-transform: uppercase;
-  margin-bottom: 15px;
-}
-
-.hero-content p {
-  font-size: 16px;
-  opacity: 0.9;
-  line-height: 1.6;
-}
 
 /* =========================
    MENU ABAJO DEL HERO
@@ -57,8 +33,10 @@ body {
 
 .hero-menu {
   position: absolute;
-  bottom: 30px;
+  bottom: 0;
   width: 100%;
+  padding: 30px 0 40px;
+  background: linear-gradient(to top, rgba(0,0,0,.85), transparent);
 }
 
 .hero-menu nav {
@@ -80,7 +58,7 @@ body {
   font-size: 13px;
   letter-spacing: 1px;
   text-transform: uppercase;
-  opacity: 0.9;
+  opacity: 0.85;
 }
 
 .hero-menu a:hover {
@@ -117,6 +95,41 @@ body {
 }
 
 /* =========================
+   PERFIL CON FOTO
+========================= */
+
+.perfil {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 60px;
+  max-width: 1000px;
+  margin: auto;
+}
+
+.perfil-texto {
+  max-width: 500px;
+  text-align: left;
+}
+
+/* FOTO TIPO PUERTA */
+
+.perfil-foto {
+  width: 180px;
+  height: 260px;
+  overflow: hidden;
+  border-radius: 120px 120px 20px 20px;
+  box-shadow: 0 15px 30px rgba(0,0,0,0.25);
+}
+
+.perfil-foto img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+}
+
+/* =========================
    HABILIDADES
 ========================= */
 
@@ -149,12 +162,18 @@ body {
 /* 3 cards visibles */
 .project {
   flex: 0 0 calc(33.333% - 20px);
-  background: #a3a0a0;
+  background: #e6e2dc;
   color: #000;
-  padding: 25px;
-  border-radius: 22px;
-  box-shadow: 0 15px 35px rgba(0,0,0,.15);
+  padding: 22px;
+  border-radius: 26px;
+  box-shadow: 0 20px 40px rgba(0,0,0,.18);
   text-align: left;
+  transition: transform .35s ease, box-shadow .35s ease;
+}
+
+.project:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 30px 60px rgba(0,0,0,.25);
 }
 
 .project h3 {
@@ -169,20 +188,22 @@ body {
 }
 
 /* IMAGEN CARD */
+
 .project img {
   width: 100%;
-  height: 200px;
+  height: 190px;
   object-fit: cover;
-  border-radius: 16px;
+  border-radius: 18px;
   margin-bottom: 15px;
   transition: transform 0.4s ease;
 }
 
 .project:hover img {
-  transform: scale(1.05);
+  transform: scale(1.06);
 }
 
 /* BOTON */
+
 .btn {
   display: inline-block;
   margin-top: 15px;
@@ -192,15 +213,17 @@ body {
   color: #fff;
   text-decoration: none;
   font-size: 14px;
-  transition: background 0.3s ease, transform 0.2s ease;
+  transition: background 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
 }
 
 .btn:hover {
-  background: #444;
-  transform: translateY(-2px);
+  background: #222;
+  transform: translateY(-3px);
+  box-shadow: 0 10px 25px rgba(0,0,0,.35);
 }
 
 /* FLECHAS */
+
 .prev,
 .next {
   position: absolute;
@@ -231,14 +254,10 @@ body {
 }
 
 /* =========================
-   RESPONSIVE (BÁSICO)
+   RESPONSIVE
 ========================= */
 
 @media (max-width: 900px) {
-  .hero-content h1 {
-    font-size: 48px;
-  }
-
   .carousel-track {
     gap: 20px;
   }
@@ -252,42 +271,64 @@ body {
     display: none;
   }
 }
-/* PERFIL CON FOTO */
-
-.perfil {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 60px;
-  max-width: 1000px;
-  margin: auto;
-}
-
-.perfil-texto {
-  max-width: 500px;
-}
-
-/* FOTO TIPO PUERTA */
-
-.perfil-foto {
-  width: 180px;
-  height: 260px;
-  overflow: hidden;
-  border-radius: 120px 120px 20px 20px;
-  box-shadow: 0 15px 30px rgba(0,0,0,0.25);
-}
-
-.perfil-foto img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-/* RESPONSIVE */
 
 @media (max-width: 768px) {
   .perfil {
     flex-direction: column;
     gap: 40px;
+    text-align: center;
   }
+
+  .perfil-texto {
+    text-align: center;
+  }
+}
+
+/* =========================
+   ONDAS ENTRE SECCIONES
+========================= */
+
+.wave-bottom {
+  position: relative;
+}
+
+.wave-bottom::after {
+  content: "";
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  width: 100%;
+  height: 120px;
+  background: #f5f1eb;
+  clip-path: path("M0,40 C150,120 350,0 600,40 850,80 1100,40 1400,60 L1400,0 L0,0 Z");
+}
+
+.wave-top {
+  position: relative;
+}
+
+.wave-top::before {
+  content: "";
+  position: absolute;
+  top: -120px;
+  left: 0;
+  width: 100%;
+  height: 120px;
+  background: #000;
+  clip-path: path("M0,60 C200,0 400,120 700,60 1000,0 1200,80 1400,40 L1400,120 L0,120 Z");
+}
+
+/* =========================
+   ANIMACIONES SCROLL
+========================= */
+
+.fade-up {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 0.8s ease;
+}
+
+.fade-up.show {
+  opacity: 1;
+  transform: translateY(0);
 }
