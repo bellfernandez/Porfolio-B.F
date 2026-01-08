@@ -378,3 +378,69 @@ body {
     font-size: 28px;
   }
 }
+
+@media (max-width: 500px) {
+
+  /* =========================
+     HERO / BANNER MOBILE
+  ========================= */
+
+  .hero {
+    min-height: 70svh;
+    padding: 0;
+    align-items: center;
+    background-position: center top;
+  }
+
+  /* Oscurecemos apenas para que no “grite” */
+  .hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+      to bottom,
+      rgba(0,0,0,.35),
+      rgba(0,0,0,.85)
+    );
+    z-index: 1;
+  }
+
+  .hero > * {
+    position: relative;
+    z-index: 2;
+  }
+
+  /* =========================
+     MENU MOBILE ELEGANTE
+  ========================= */
+
+  .hero-menu {
+    position: absolute;
+    bottom: 0;
+    background: rgba(0,0,0,.8);
+    backdrop-filter: blur(6px);
+    padding: 16px 0 18px;
+  }
+
+  .hero-menu nav {
+    flex-direction: column;
+    gap: 14px;
+  }
+
+  .menu-name {
+    font-size: 15px;
+    letter-spacing: 1.5px;
+  }
+
+  .hero-menu ul {
+    gap: 18px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .hero-menu a {
+    font-size: 11px;
+    opacity: 0.9;
+  }
+
+}
