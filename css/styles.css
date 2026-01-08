@@ -506,3 +506,8 @@ body {
   }
 
 }
+@media (max-width: 500px) {
+  .hero {
+    background-position: right center;
+  }
+}
