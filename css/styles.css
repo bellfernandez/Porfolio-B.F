@@ -256,7 +256,7 @@ body {
 /* PERFIL CON FOTO */
 
 .perfil {
-  display: flex;
+  display: block;
   align-items: center;
   justify-content: center;
   gap: 60px;
